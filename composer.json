@@ -1,0 +1,9 @@
+{
+    "name": "miravo/sendgrid-plugin",
+    "type": "october-plugin",
+    "description": "Adds support for Sendgrid as a mail driver in October CMS",
+    "require": {
+        "composer/installers": "~1.0",
+        "s-ichikawa/laravel-sendgrid-driver": "^4.0"
+    }
+}
