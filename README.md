@@ -1,3 +1,4 @@
+
 # Sendgrid Plugin
 
 Adds support for Sendgrid as a mail driver in October CMS. After installing this plugin, Sendgrid will appear as a mail driver in the **Settings → Mail Configuration** area.
@@ -8,27 +9,28 @@ Adds support for Sendgrid as a mail driver in October CMS. After installing this
 
 ### Installation
 
-To install with Composer, run this from your project root.
+ 1.  Run these two commands from your project root.
 
 ```bash
 
-composer require  miravo/sendgrid-plugin
+composer require miravo/sendgrid-plugin
+composer require s-ichikawa/laravel-sendgrid-driver
 
 ```
 
-Add this in config/services.php
+2. Add this in config/services.php
 
-    'sendgrid' => [
-        'api_key' => env('SENDGRID_API_KEY'),
-    ],
-
-Add this in config/mail.php
-
-    'mailers' => [
-        'sendgrid' => [
-            'transport' => 'sendgrid',
+       'sendgrid' => [
+            'api_key' => env('SENDGRID_API_KEY'),
         ],
-    ],
+
+3. Add this in config/mail.php
+
+        'mailers' => [
+	        'sendgrid' => [
+	            'transport' => 'sendgrid',
+	        ],
+	     ],
 
 ## Notes
 
@@ -38,5 +40,5 @@ Sendgrid requires a plain text body version to send messages. If the plain text 
 
 To avoid this error, you have two options: 
 
-1 - either include a plain text version for all your emails
-2 - tick the checkbox "Automatically convert HTML to plain text, if plain text is empty." 
+1. either include a plain text version for all your emails
+2. tick the checkbox "Automatically convert HTML to plain text, if plain text is empty." 
