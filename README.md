@@ -32,6 +32,9 @@ composer require s-ichikawa/laravel-sendgrid-driver
 	        ],
 	     ],
 
+4. Go in the backend, Settings → Mail Configuration  and set your API Key.
+
+
 ## Notes
 
 Sendgrid requires a plain text body version to send messages. If the plain text body is empty, Sendgrid will return an error from the API, such as:
